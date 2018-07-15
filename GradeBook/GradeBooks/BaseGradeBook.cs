@@ -11,14 +11,43 @@ namespace GradeBook.GradeBooks
 {
     public class BaseGradeBook
     {
-        public string Name { get; set; }
-        public List<Student> Students { get; set; }
+        #region Constructor
 
         public BaseGradeBook(string name)
         {
             Name = name;
             Students = new List<Student>();
         }
+
+        #endregion
+
+        #region Properies
+
+        private string name;
+        private List<Student> students;
+        private GradeBookType type;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }        
+
+        public List<Student> Students
+        {
+            get { return students; }
+            set { students = value; }
+        }        
+
+        public GradeBookType Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
+        #endregion
+
+        #region Methods        
 
         public void AddStudent(Student student)
         {
@@ -264,5 +293,7 @@ namespace GradeBook.GradeBooks
             
             return JsonConvert.DeserializeObject(json, gradebook);
         }
+
+        #endregion
     }
 }
