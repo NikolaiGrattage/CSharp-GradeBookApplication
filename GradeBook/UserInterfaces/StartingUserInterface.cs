@@ -55,6 +55,7 @@ namespace GradeBook.UserInterfaces
             else
             {
                 Console.WriteLine(typeErrorMessage);
+                return;
             }
 
             //switch (gradeBookType)
