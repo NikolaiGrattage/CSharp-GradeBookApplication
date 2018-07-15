@@ -58,19 +58,6 @@ namespace GradeBook.UserInterfaces
                 return;
             }
 
-            //switch (gradeBookType)
-            //{
-            //    case "standard":
-            //        gradeBook = new StandardGradeBook(name);
-            //        break;
-            //    case "ranked":
-            //        gradeBook = new RankedGradeBook(name);
-            //        break;
-            //    default:
-            //        Console.WriteLine(typeErrorMessage);
-            //        break;
-            //}
-
             Console.WriteLine("Created gradebook {0}.", name);
             
             GradeBookUserInterface.CommandLoop(gradeBook);
