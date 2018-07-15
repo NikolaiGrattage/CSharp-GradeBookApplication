@@ -7,6 +7,8 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
+        string errorMessage = "Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.";
+
         public RankedGradeBook(string name) : base(name)
         {
             Type = Enums.GradeBookType.Ranked;
@@ -49,7 +51,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                Console.WriteLine(errorMessage);
                 return;
             }
             base.CalculateStatistics();
@@ -59,7 +61,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                Console.WriteLine(errorMessage);
                 return;
             }
             base.CalculateStudentStatistics(name);
