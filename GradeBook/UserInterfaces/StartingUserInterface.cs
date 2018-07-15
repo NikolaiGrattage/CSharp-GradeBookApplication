@@ -43,7 +43,7 @@ namespace GradeBook.UserInterfaces
 
             var name = parts[1];
             var gradeBookType = parts[2].ToLower();
-            bool isWeighted = false;
+            bool isWeighted = Convert.ToBoolean(parts[3]);
             BaseGradeBook gradeBook = null;
             string typeErrorMessage = gradeBookType + " is not a supported type of gradebook, please try again";
 
