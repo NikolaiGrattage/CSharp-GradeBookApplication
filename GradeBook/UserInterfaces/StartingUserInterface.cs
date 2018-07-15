@@ -40,11 +40,11 @@ namespace GradeBook.UserInterfaces
             }
 
             var name = parts[1];
-            var gradeBookType = parts[2];
+            var gradeBookType = parts[2].ToLower();
             BaseGradeBook gradeBook;
             string typeErrorMessage = gradeBookType + " is not a supported type of gradebook, please try again";
 
-            switch (gradeBookType.ToLower())
+            switch (gradeBookType)
             {
                 case "standard":
                     gradeBook = new StandardGradeBook(name);
